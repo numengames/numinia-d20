@@ -114,3 +114,17 @@ The agora channel (#d20-agora) is a free-form Discord channel where your communi
 - Revise-values 
 - Decision-making about values: lazy consensus
 - Check-values of messages
+
+## Contributing
+
+We welcome contributions! If you'd like to improve this project, please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch (git checkout -b feature/awesome-feature).
+3. Make your changes and commit them (git commit -am 'Add an awesome feature').
+4. Push the branch (git push origin feature/awesome-feature).
+5. Open a pull request.
+
+## 📜 License
+
+Code released under the [MIT License](https://opensource.org/license/MIT).
