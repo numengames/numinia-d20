@@ -1,6 +1,10 @@
 
 # D20 Governance Bot
 
+## Prerequisites
+- Python, pip & poetry installed or Docker.
+- [Discord account](https://discord.com) with 2FA activated.
+- An api key from [stability](https://stability.ai)
 
 ## How to run locally
 
@@ -13,6 +17,36 @@
 7. Try the `/solo` command in the #d20-agora channel to start a solo quest, and use -f for fast mode
 8. Running tests
     Run `pytest` from project root.
+
+## How to run locally using Docker
+
+1. Ensure you have Docker installed on your system.
+2. Build the Docker image using:
+   ```bash
+   docker build -t d20-governance-bot .
+   ```
+3. Create an .env file including the DISCORD_TOKEN and STABILITY_API_KEY tokens.
+3. Run the container passing the .env file:
+    ```bash
+    docker run --rm -d --env-file .env --name my-d20-bot d20-governance-bot
+    ```
+
+## Creating an application for the bot
+
+You can create and manage Discord applications (bots) via the following website:
+
+- [Discord Developer Portal](https://discord.com/developers)
+
+Make sure you do the following steps:
+
+1. Ensure you have the 2FA in your account activated.
+2. From the [Applications tab](https://discord.com/developers/applications), create a new application.
+3. In the application (When you create a new one, you're redirected by default inside):
+    1. Go to the **General Information** tab and update the App Icon and the name of the application.
+    2. Go to the **Bot** tab, first, update the icon, secondly, **set all the privileged Gateway Intents** and lastly get a new token by clicking in *Reset Token*. That's the DISCORD_TOKEN you need to pass in the environment variable.
+    3. Go to the **Instalation** and set the install link display to a Custom URL and set the `&scope=bot&permissions=8` at the end of the URL (as a trick to grab the URL, use the discord provided link)
+4. Invite the bot to the server you want and set up a role for it.
+
 
 ## Overview
 The d20 bot allows communities to play governance games in an LLM-mediated environment. Individuals and groups can come together to embark on a governance “quest”, where they make lightweight decisions about the community and experience varied mechanisms of decision-making. The bot moderates the governance game through different "culture modules" - playfully modifying users' messages to cultivate diverse interaction environments for participants.
