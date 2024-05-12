@@ -6,6 +6,8 @@
 - [Discord account](https://discord.com) with 2FA activated.
 - An api key from [stability](https://stability.ai)
 
+Important: This code has been tested only on x86-64 architectures and is not compatible with ARM architectures, including the new Apple Silicon processors (M1, M2, etc.). If you are using a device with Apple Silicon, this code may not function properly. Use Docker if you want to run it locally on that devices.
+
 ## How to run locally
 
 1. Install poetry for managing dependencies
