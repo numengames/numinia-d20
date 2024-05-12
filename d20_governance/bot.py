@@ -344,8 +344,8 @@ bot = MyBot(command_prefix="/", description=description, intents=intents)
 bot.remove_command("help")
 
 
-def run_bot():
-    bot.run(token=DISCORD_TOKEN)
+async def run_bot():
+    await bot.start(token=DISCORD_TOKEN)
 
 
 @bot.tree.command(name="help", description="Help information")
