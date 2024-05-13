@@ -4,7 +4,7 @@
 # This software is released under the MIT License.
 # https://opensource.org/licenses/MIT
 
-FROM python:3.10-slim
+FROM python:3.11-slim
 
 WORKDIR /bot
 
@@ -18,6 +18,7 @@ RUN apt-get update && apt-get install -y \
     && poetry config virtualenvs.create false \
     && pip install "emoji==2.6.0" \
     && pip install "svglib==1.5.1" \
+    && poetry lock --no-update \
     && poetry install \
     && adduser --disabled-password --gecos '' appuser \
     && mkdir -p logs \
