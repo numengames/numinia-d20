@@ -19,10 +19,14 @@ RUN apt-get update && apt-get install -y \
     && pip install "emoji==2.6.0" \
     && pip install "svglib==1.5.1" \
     && poetry install --only main \
-    && mkdir -p logs && touch logs/bot.log \
-    && chown -R user:user logs
+    && adduser --disabled-password --gecos '' appuser \
+    && mkdir -p logs \
+    && touch logs/bot.log \
+    && chown -R appuser:appuser logs
 
 COPY . .
+
+USER appuser
 
 ENV PYTHONPATH /bot
 
