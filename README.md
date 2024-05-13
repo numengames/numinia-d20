@@ -30,7 +30,7 @@ Important: This code has been tested only on x86-64 architectures and is not com
 3. Create an .env file including the DISCORD_TOKEN and STABILITY_API_KEY tokens.
 3. Run the container passing the .env file:
     ```bash
-    docker run --rm -d --env-file .env --name my-d20-bot d20-governance-bot
+    docker run --rm -d --env-file .env --name -p 8000:8000 my-d20-bot d20-governance-bot
     ```
 
 ## Creating an application for the bot
