@@ -13,7 +13,7 @@ Important: This code has been tested only on x86-64 architectures and is not com
 1. Install poetry for managing dependencies
 2. Run `poetry install`
 3. Run `poetry shell`
-4. Create a .env file and set DISCORD_TOKEN environment variable to your bot's token as well as OPENAI_API_KEY to your OpenAI API key. 
+4. Create a .env file and set DISCORD_TOKEN environment variable to your bot's token as well as STABILITY_API_KEY to your OpenAI API key.
 5. Make sure the bot has been added to your server with admin permissions.
 6. Run python3 d20_governance/__main__.py. The bot will create all the necessary channels in your server once it runs.
 7. Try the `/solo` command in the #d20-agora channel to start a solo quest, and use -f for fast mode
