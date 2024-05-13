@@ -18,7 +18,9 @@ RUN apt-get update && apt-get install -y \
     && poetry config virtualenvs.create false \
     && pip install "emoji==2.6.0" \
     && pip install "svglib==1.5.1" \
-    && poetry install --only main
+    && poetry install --only main \
+    && mkdir -p logs && touch logs/bot.log \
+    && chown -R user:user logs
 
 COPY . .
 
